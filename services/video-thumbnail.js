@@ -65,7 +65,7 @@ module.exports = {
 
 async function getVideo(videoPath, savePath) {
   if( videoPath.indexOf("http") != 0 ) {
-    videoPath = 'http://' + videoPath;
+    videoPath = 'https://' + videoPath;
   }
   return new Promise((resolve, reject) => {
     let tempFile = fs.createWriteStream(savePath);
